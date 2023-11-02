@@ -1,0 +1,95 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(2, 0, 36);
+  background: radial-gradient(circle, rgb(2, 0, 36) 0%, rgb(121, 93, 9) 64%, rgb(191, 184, 41) 95%, rgb(250, 239, 0) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.diamond {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  transform: rotate(0deg);
+  animation: rotating 12s linear infinite;
+}
+.diamond__title {
+  font-size: 4rem;
+  letter-spacing: 1rem;
+  transform: translateY(calc(-100% - 2rem));
+  font-weight: 400;
+  font-family: "Oswald", sans-serif;
+  color: #FFBB5C;
+}
+
+span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 5rem solid transparent;
+  border-top: 5rem solid transparent;
+  border-right: 5rem solid #FFBB5C;
+  border-bottom: 5rem solid #C63D2F;
+}
+
+span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 5rem solid #FFBB5C;
+  border-top: 5rem solid #FF9B50;
+  border-right: 5rem solid #E25E3E;
+  border-bottom: 5rem solid #C63D2F;
+}
+
+span:nth-child(3) {
+  position: absolute;
+  top: 49.7%;
+  left: 0%;
+  width: 0;
+  height: 0;
+  border-left: 5rem solid #FFBB5C;
+  border-top: 5rem solid #FF9B50;
+  border-right: 5rem solid #E25E3E;
+  border-bottom: 5rem solid #C63D2F;
+}
+
+span:nth-child(4) {
+  position: absolute;
+  top: 49.7%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 5rem solid #FFBB5C;
+  border-top: 5rem solid #FF9B50;
+  border-right: 5rem solid #E25E3E;
+  border-bottom: 5rem solid #C63D2F;
+}
+
+/*# sourceMappingURL=style.css.map */

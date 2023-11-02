@@ -1,0 +1,83 @@
+@use '../abstracts/colors.scss';
+@use '../components/animation.scss';
+@use '../abstracts/mixins.scss';
+
+body{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: colors.$radialGradient;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.diamond{
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    transform: rotate(0deg);
+    animation: rotating 12s linear infinite;
+
+    &__title{
+        font-size: 4rem;
+        letter-spacing: 1rem;
+        transform: translateY(calc(-100% - 2rem));
+        @include mixins.fontOswald;
+        color: colors.$color1;
+        
+    }
+}
+
+
+
+
+span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 5rem solid transparent;
+    border-top: 5rem solid transparent;
+    border-right: 5rem solid (colors.$color1);
+    border-bottom: 5rem solid (colors.$color4);
+}
+
+span:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 5rem solid (colors.$color1);
+    border-top: 5rem solid (colors.$color2);
+    border-right: 5rem solid (colors.$color3);
+    border-bottom: 5rem solid (colors.$color4);
+}
+
+span:nth-child(3){
+    position: absolute;
+    top: 49.7%;
+    left: 0%;
+    width: 0;
+    height: 0;
+    border-left: 5rem solid (colors.$color1);
+    border-top: 5rem solid (colors.$color2);
+    border-right: 5rem solid (colors.$color3);
+    border-bottom: 5rem solid (colors.$color4);
+}
+
+span:nth-child(4){
+    position: absolute;
+    top: 49.7%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 5rem solid (colors.$color1);
+    border-top: 5rem solid (colors.$color2);
+    border-right: 5rem solid (colors.$color3);
+    border-bottom: 5rem solid (colors.$color4);
+}
